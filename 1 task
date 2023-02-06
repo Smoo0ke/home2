@@ -1,0 +1,16 @@
+x = float(input("Введите вещественное число:"))
+int_part = int(x)
+float_part = x - int_part
+sum_int_part = 0
+while int_part > 0:
+ sum_int_part += int_part % 10
+ int_part //= 10
+sum_float_part = 0
+while float_part > 0:
+ float_part *= 10
+ digit = int(float_part)
+ sum_float_part += digit
+ float_part -= digit
+total_sum = sum_float_part + sum_int_part
+
+print("Сумма цифр:", total_sum)
